@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
+import NavLink from "./navLink";
 
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
   { url: "/portfolio", title: "Portfolio" },
   { url: "/contact", title: "Contact" },
-  { url: "/projects", title: "Projects" },
 ];
 
 const Navbar = () => {
@@ -19,21 +19,17 @@ const Navbar = () => {
     <div
       className="h-full items-center flex 
       justify-between px-4 sm:px-8 md:px-12 lg:px-20
-      xl:px-48"
+      xl:px-48 text-xl"
     >
       {/* links */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => {
-          return (
-            <Link href={link.url} key={link.id}>
-              {link.title}
-            </Link>
-          );
+          return <NavLink link={link} key={link.index} />;
         })}
       </div>
       {/* logo */}
-      <div className="md:hidden lg:flex w1/3 justify-center">
-        <Link 
+      <div className="md:hidden lg:flex xl:w1/3 xl:justify-center">
+        <Link
           href={"/"}
           className="text-sm rounded-md
          bg-black p-1 font-semibold flex 
@@ -53,19 +49,19 @@ const Navbar = () => {
       {/* social logo */}
       <div className="hidden md:flex gap-4 w-1/3">
         <Link href="#">
-          <Image src='/github.png' alt='' width={24} height={24} />
+          <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link href="#">
-          <Image src='/dribbble.png' alt='' width={24} height={24} />
+          <Image src="/dribbble.png" alt="" width={24} height={24} />
         </Link>
         <Link href="#">
-          <Image src='/facebook.png' alt='' width={24} height={24} />
+          <Image src="/facebook.png" alt="" width={24} height={24} />
         </Link>
         <Link href="#">
-          <Image src='/instagram.png' alt='' width={24} height={24} />
+          <Image src="/instagram.png" alt="" width={24} height={24} />
         </Link>
         <Link href="#">
-          <Image src='/linkedin.png' alt='' width={24} height={24} />
+          <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
       {/* responsive menu button */}
