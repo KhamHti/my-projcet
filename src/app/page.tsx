@@ -3,12 +3,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div
-      className="flex flex-col lg:flex-row h-full px-4 sm:px-8 md:px-12 lg:px-20
-      xl:px-48"
+      className="flex flex-col lg:flex-row h-full px-4 sm:px-8 
+      md:px-12 lg:px-20 xl:px-48"
     >
       {/* image container */}
-      <div className="h-1/2 relative lg:w-1/2 lg:h-full">
-        <Image src={"/hero.png"} alt="" fill className="object-contain" />
+      <div className="h-1/2 lg:w-1/2 lg:h-full relative">
+        <Image
+          src={"/hero.png"}
+          alt="hero"
+          fill
+          className="object-contain"
+        />
       </div>
       {/* text container   */}
       <div
