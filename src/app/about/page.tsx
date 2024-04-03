@@ -10,10 +10,10 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* container */}
-      <div className=''>
+      <div className='h-full overflow-scroll flex'>
         {/* text container */}
         <div className='p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex 
-             flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64'>
+             flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 lg:w-2/3 xl:w-1/2'>
           {/* biography */}
           <div className='flex flex-col gap-12 justify-center'>
             <h1 className='text-2xl font-bold'>Biography</h1>
@@ -140,35 +140,142 @@ const AboutPage = () => {
           </div>
           {/* experience container */}
           <div className='flex flex-col gap-12 justify-center pb-48'>
+            {/* exp title  */}
             <div className='flex flex-col gap-12 justify-center'>
               <h1 className='text-2xl font-bold'>Experience</h1>
               {/* exp list  */}
-              <div>
-                {/* exp item  */}
-                <div>
-                  {/* job title */}
-                  <div>engineer</div>
-                  {/* job desc */}
-                  <div>
-                    My current employment. Way better than the position before !
+              <div className=''>
+
+                {/* exp list item 1 */}
+                <div className='flex justify-between h-48'>
+                  {/* left  */}
+                  <div className='w-1/3' >
+                    {/* job title  */}
+                    <div className='bg-white p-3 rounded-b-lg 
+                         rounded-s-lg font-semibold'
+                    >
+                      Senior React Native Developer
+                    </div>
+                    {/* job description  */}
+                    <div className='p-3 text-sm italic'>
+                      My current employment. Way better than the position
+                      before !
+                    </div>
+                    {/* job date  */}
+                    <div className='p-3 text-red-400 text-sm font-semibold'>
+                      2022 - current
+                    </div>
+                    {/* job company  */}
+                    <div className='p-2 rounded bg-white text-sm 
+                         font-semibold w-fit'
+                    >
+                      Apple
+                    </div>
                   </div>
-                  {/* join date */}
-                  <div>2023 - Present</div>
-                  {/* company */}
-                  <div>Apple</div>
+                  {/* center  */}
+                  <div className='w-1/6 flex flex-1 items-center justify-center'>
+                    {/* line  */}
+                    <div className='w-1 h-full bg-gray-600 rounded relative'>
+                      {/* line circle  */}
+                      <div className='absolute w-5 h-5 ring-red-400 
+                           rounded-full ring-4 bg-white -left-2'
+                      >
+                      </div>
+                    </div>
+                  </div>
+                  {/* right  */}
+                  <div className='w-1/3'>
+                  </div>
                 </div>
-                <div>
-                  right
+
+                {/* exp list item 2 */}
+                <div className='flex justify-between h-48'>
+                  {/* left  */}
+                  <div className='w-1/3'>
+                  </div>
+                  {/* center  */}
+                  <div className='w-1/6 flex flex-1 items-center justify-center'>
+                    {/* line  */}
+                    <div className='w-1 h-full bg-gray-600 rounded relative'>
+                      {/* line circle  */}
+                      <div className='absolute w-5 h-5 ring-red-400 
+                           rounded-full ring-4 bg-white -left-2'
+                      >
+                      </div>
+                    </div>
+                  </div>
+                  {/* right  */}
+                  <div className='w-1/3' >
+                    {/* job title  */}
+                    <div className='bg-white p-3 rounded-b-lg 
+                         rounded-s-lg font-semibold'
+                    >
+                      Senior React Native Developer
+                    </div>
+                    {/* job description  */}
+                    <div className='p-3 text-sm italic'>
+                      My current employment. Way better than the position
+                      before !
+                    </div>
+                    {/* job date  */}
+                    <div className='p-3 text-red-400 text-sm font-semibold'>
+                      2022 - current
+                    </div>
+                    {/* job company  */}
+                    <div className='p-2 rounded bg-white text-sm 
+                         font-semibold w-fit'
+                    >
+                      Apple
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  left
+                {/* exp list item 3 */}
+                <div className='flex justify-between h-48'>
+                  {/* left  */}
+                  <div className='w-1/3' >
+                    {/* job title  */}
+                    <div className='bg-white p-3 rounded-b-lg 
+                         rounded-s-lg font-semibold'
+                    >
+                      Senior React Native Developer
+                    </div>
+                    {/* job description  */}
+                    <div className='p-3 text-sm italic'>
+                      My current employment. Way better than the position
+                      before !
+                    </div>
+                    {/* job date  */}
+                    <div className='p-3 text-red-400 text-sm font-semibold'>
+                      2022 - current
+                    </div>
+                    {/* job company  */}
+                    <div className='p-2 rounded bg-white text-sm 
+                         font-semibold w-fit'
+                    >
+                      Apple
+                    </div>
+                  </div>
+                  {/* center  */}
+                  <div className='w-1/6 flex flex-1 items-center justify-center'>
+                    {/* line  */}
+                    <div className='w-1 h-full bg-gray-600 rounded relative'>
+                      {/* line circle  */}
+                      <div className='absolute w-5 h-5 ring-red-400 
+                           rounded-full ring-4 bg-white -left-2'
+                      >
+                      </div>
+                    </div>
+                  </div>
+                  {/* right  */}
+                  <div className='w-1/3'>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* svg container */}
-        <div className='hidden'></div>
+        <div className='hidden lg:block w-1/3 xl:w-1/2'></div>
       </div>
     </motion.div>
   )
